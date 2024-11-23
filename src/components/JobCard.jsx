@@ -15,7 +15,7 @@ export default function JobCard({ job }) {
 
   return (
     <div
-      className={`bg-white flex max-lg:flex-col items-center max-lg:items-stretch justify-between gap-x-16 px-14 py-8 max-md:pt-0 max-lg:gap-x-8 max-xl:px-8 max-md:px-6 max-sm:px-4 rounded-md drop-shadow-xl ${
+      className={`bg-white flex max-lg:flex-col items-center max-lg:items-stretch justify-between gap-x-16 px-14 py-8 max-md:pt-0 max-lg:gap-x-8 max-xl:px-8 max-md:px-6 max-sm:px-4 rounded-md drop-shadow-md ${
         featured && 'border-l-[5px] border-desaturatedDarkCyan'
       }`}>
       <div className='flex max-md:flex-col items-center max-md:items-start gap-x-6'>
