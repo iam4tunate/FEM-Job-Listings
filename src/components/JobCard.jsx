@@ -6,6 +6,13 @@ export default function JobCard({ job }) {
 
   const addFilterItem = useFilterStore((state) => state.addItem);
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div
       className={`bg-white flex max-lg:flex-col items-center max-lg:items-stretch justify-between gap-x-16 px-14 py-8 max-md:pt-0 max-lg:gap-x-8 max-xl:px-8 max-md:px-6 max-sm:px-4 rounded-md drop-shadow-xl ${
@@ -18,7 +25,7 @@ export default function JobCard({ job }) {
           className='w-[88px] h-[88px] max-sm:w-[48px] max-sm:h-[48px] object-cover max-md:-translate-y-9 max-sm:-translate-y-5 max-md:-mb-9 max-sm:-mb-5'
         />
         <div className='max-md:pt-5 max-sm:pt-2'>
-          <div className='flex items-center gap-x-5'>
+          <div className='flex items-center gap-x-5 max-sm:gap-x-3.5'>
             <div className='text-lg max-md:text-[13px] text-desaturatedDarkCyan font-bold'>
               {job.company}
             </div>
@@ -52,7 +59,10 @@ export default function JobCard({ job }) {
         {tags.map((tag, i) => (
           <span
             key={i}
-            onClick={() => addFilterItem(tag)}
+            onClick={() => {
+              addFilterItem(tag);
+              handleScrollToTop();
+            }}
             className='bg-desaturatedDarkCyan hover:bg-opacity-100 hover:text-white bg-opacity-15 h-[32px] flex items-center px-2 rounded cursor-pointer'>
             {tag}
           </span>
