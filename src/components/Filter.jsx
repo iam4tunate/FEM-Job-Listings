@@ -8,7 +8,7 @@ export default function Filter() {
 
   if (!filters.length) return null;
   return (
-    <div className='-translate-y-8 -mb-8 min-h-[72px] py-4 bg-white rounded-md px-14 max-xl:px-8 max-md:px-6 max-sm:px-4 flex gap-x-4 items-center justify-between drop-shadow-xl'>
+    <div className='-translate-y-8 -mb-8 min-h-[72px] py-4 bg-white rounded-md px-14 max-xl:px-8 max-md:px-6 max-sm:px-4 flex gap-x-4 items-center justify-between drop-shadow-md'>
       <div className='flex flex-wrap items-center gap-4'>
         {filters.map((item, i) => (
           <div key={i} className='h-[32px] flex items-center justify-center'>
